@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsqura.tests.CreateandDeleteExpense" class="method navigator-link" hash-for-method="MyCreateDeleteExpense">MyCreateDeleteExpense</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,17 +122,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.obsqura.tests.CreateandDeleteExpense" class="method navigator-link" hash-for-method="MyCreateDeleteExpense">MyCreateDeleteExpense</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.obsqura.tests.LoginTest" class="method navigator-link" hash-for-method="MyLoginTest">MyLoginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.obsqura.tests.SearchProductTest" class="method navigator-link" hash-for-method="MySearchProductTest">MySearchProductTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -133,6 +137,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.obsqura.tests.CreateandDeleteExpense</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="MyCreateDeleteExpense">
+                  </a> <!-- MyCreateDeleteExpense -->
+                  <span class="method-name">MyCreateDeleteExpense</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at com.obsqura.tests.CreateandDeleteExpense.MyCreateDeleteExpense(CreateandDeleteExpense.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -159,36 +187,6 @@
                   <a name="MyLoginTest">
                   </a> <!-- MyLoginTest -->
                   <span class="method-name">MyLoginTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.obsqura.tests.CreateandDeleteExpense</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="MyCreateDeleteExpense">
-                  </a> <!-- MyCreateDeleteExpense -->
-                  <span class="method-name">MyCreateDeleteExpense</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.obsqura.tests.SearchProductTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="MySearchProductTest">
-                  </a> <!-- MySearchProductTest -->
-                  <span class="method-name">MySearchProductTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -276,23 +274,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'MyCreateDeleteExpense')
 data.setCell(0, 2, 'com.obsqura.tests.CreateandDeleteExpense')
-data.setCell(0, 3, 11327);
+data.setCell(0, 3, 11531);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'CreateDeliveryBoyTest')
 data.setCell(1, 2, 'com.obsqura.tests.CreateDeliveryBoy')
-data.setCell(1, 3, 10926);
+data.setCell(1, 3, 9979);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'MySearchProductTest')
-data.setCell(2, 2, 'com.obsqura.tests.SearchProductTest')
-data.setCell(2, 3, 9867);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'MyLoginTest')
-data.setCell(3, 2, 'com.obsqura.tests.LoginTest')
-data.setCell(3, 3, 4883);
+data.setCell(2, 1, 'MyLoginTest')
+data.setCell(2, 2, 'com.obsqura.tests.LoginTest')
+data.setCell(2, 3, 3950);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -323,85 +317,76 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.obsqura.tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">InitializeDriver(Chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">com.obsqura.tests.SearchProductTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">InitializeDriver(Edge)</span>
+              <div class="configuration-method before">
+                <span class="method-name">InitializeDriver</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.obsqura.tests.CreateandDeleteExpense</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">InitializeDriver(Edge)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              <div class="chronological-class-name">com.obsqura.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">InitializeDriver</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.obsqura.tests.CreateDeliveryBoy</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">InitializeDriver(Chrome)</span>
+              <div class="configuration-method before">
+                <span class="method-name">InitializeDriver</span>
                 <span class="method-start">1 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.tests.CreateandDeleteExpense</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">InitializeDriver</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsqura.tests.CreateDeliveryBoy</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">CreateDeliveryBoyTest</span>
-                <span class="method-start">12819 ms</span>
+                <span class="method-start">11957 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.obsqura.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">MyLoginTest</span>
-                <span class="method-start">12888 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.obsqura.tests.SearchProductTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">MySearchProductTest</span>
-                <span class="method-start">13347 ms</span>
+                <span class="method-start">12134 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.obsqura.tests.CreateandDeleteExpense</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">MyCreateDeleteExpense</span>
-                <span class="method-start">13775 ms</span>
+                <span class="method-start">13371 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.obsqura.tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
+              <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">17856 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.obsqura.tests.SearchProductTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">TearDown</span>
-                <span class="method-start">23216 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-start">16102 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.obsqura.tests.CreateDeliveryBoy</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
+              <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">23748 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-start">21946 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.obsqura.tests.CreateandDeleteExpense</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
+              <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">25104 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-start">25102 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
