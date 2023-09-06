@@ -10,34 +10,38 @@ import com.obsqura.utilities.PageUtility;
 public class ListDeliveryBoyPage extends PageUtility{
 	WebDriver driver;
 
-	public ListDeliveryBoyPage (WebDriver driver) {
-		super(driver);
+	public ListDeliveryBoyPage(WebDriver driver) {
+        super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css =".btn.btn-rounded.btn-danger")
+	@FindBy(css = ".btn.btn-rounded.btn-danger")
 	private WebElement newBtn;
 	
-	@FindBy(xpath ="//input[@id='name']")
+	@FindBy(xpath = "//input[@id='name']")
 	private WebElement name;
 	
-	@FindBy(xpath ="//input[@id='username']")
+	@FindBy(xpath = "//input[@id='username']")
 	private WebElement userName;
 	
-	@FindBy(xpath ="//input[@id='password']")
+	@FindBy(xpath = "//input[@id='password']")
 	private WebElement password;
 	
-	@FindBy(xpath = "//button[@name='create']")
+	@FindBy(css= ".card-footer button")
 	private WebElement saveBtn;
 	
-	public void CreateDeliveryBoy() {
+	
+	public void CreateDeliveryBoy(String date) {
 		ClickElement(newBtn);
-		SetTextBox(name,"Linu");
-		SetTextBox(userName,"linu4569");
-		SetTextBox(password,"12345");
+		SetTextBox(name, "Client");
+		SetTextBox(userName, "client"+date);
+		SetTextBox(password, "12345");
 		ScrollUp();
-		ClickElement(saveBtn);
+		WaitUntilClickable(saveBtn);
+		//ClickElement(saveBtn);
+		
+		
 	}
 	
 	public void ValidateDeliveryBoyIsCreated() {

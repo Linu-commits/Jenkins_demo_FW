@@ -69,4 +69,9 @@ public class PageUtility {
 		js.executeScript("window.scrollBy(0,3000);");
 	}
 	
+	public void WaitUntilClickable(WebElement element) {
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
+	
 }
