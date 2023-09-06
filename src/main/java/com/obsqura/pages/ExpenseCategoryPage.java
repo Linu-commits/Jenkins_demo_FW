@@ -57,18 +57,8 @@ public class ExpenseCategoryPage extends PageUtility{
 		ClickElement(saveBtn);
 	}
 	
-	public void ValidateUniqueNameIsCreated(String productName) {
-//		title_input.sendKeys(productName);
-//		searchProductBtn.click();
-//		String text=productTitle.getText();
-//		System.out.println(text);
-//		
-//		if(text.contains(productName)) {
-//			Assert.assertTrue(true);
-//		}
-//		else {
-//			Assert.assertTrue(false);
-//		}	
+	public void ValidateUniqueNameIsCreated() {
+		
 	}
 	
 	public void DeleteExpenseCategory(String Name) {
@@ -86,7 +76,7 @@ public class ExpenseCategoryPage extends PageUtility{
 		Assert.assertEquals(text, "Expense Category Deleted Successfully");
 		}
 		
-	}
+	}	
 	
 	
 }
